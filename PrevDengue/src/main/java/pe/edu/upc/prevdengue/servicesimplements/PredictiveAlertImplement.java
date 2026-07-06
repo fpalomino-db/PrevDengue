@@ -40,8 +40,8 @@ public class PredictiveAlertImplement implements IPredictiveAlertService {
     @Override
     public void update(PredictiveAlert pA) { paR.save(pA); }
 
-    @Scheduled(cron = "0 0 0 * * *")
-    //@Scheduled(cron = "0 * * * * *")// Cada minuto
+    //@Scheduled(cron = "0 0 0 * * *")
+    @Scheduled(cron = "0 * * * * *")// Cada minuto
     public void calcularRiesgoEpidemiologico() {
         System.out.println("⏳ [CRON] Iniciando análisis predictivo de riesgo por distritos...");
 
