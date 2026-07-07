@@ -25,7 +25,6 @@ import pe.edu.upc.prevdengue.dtos.GoogleTokenDTO;
 import java.util.Collections;
 
 @RestController
-@CrossOrigin
 public class JwtAuthenticationController {
     @Autowired private AuthenticationManager authenticationManager;
     @Autowired private JwtTokenUtil jwtTokenUtil;
